@@ -7,7 +7,7 @@
 - Database: `Postgres`
 - Auth: `Clerk`
 - Styling: `Tailwind`
-- Migration tool: `stepwise-migrations` (I built this - https://github.com/stepwise-dev/stepwise-migrations)
+- Migration tool: `stepwise-migrations` (I built this - https://github.com/mj1618/stepwise-migrations)
 - Query Builder: `Kysely`
 - Deployment: `Render`
 

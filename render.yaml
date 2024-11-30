@@ -1,0 +1,41 @@
+services:
+  - type: web
+    name: my-web
+    env: node
+    repo: https://github.com/{your-github-username}/remix-clerk-db-sessions-example.git # TODO
+    buildCommand: npm i && npm run build
+    startCommand: npm start
+    autoDeploy: true
+    healthCheckPath: /
+    rootDir: ./
+    plan: starter
+    domains:
+      - remix-clerk-db-sessions-example.onrender.com
+    envVars:
+      - key: SESSION_SECRET
+        value: super-secret
+      - key: BASE_URL
+        value: https://remix-clerk-db-sessions-example.onrender.com
+      - key: NODE_ENV
+        value: production
+      - key: DATABASE_URL
+        fromDatabase:
+          name: my-db
+          property: connectionString
+      - key: CLERK_PUBLISHABLE_KEY
+        value: your-publishable-key # TODO
+      - key: CLERK_SECRET_KEY
+        value: your-secret-key # TODO
+      - key: CLERK_SIGN_IN_URL
+        value: /sign-in
+      - key: CLERK_SIGN_UP_URL
+        value: /sign-up
+      - key: CLERK_SIGN_IN_FALLBACK_REDIRECT_URL
+        value: /dashboard
+      - key: CLERK_SIGN_UP_FALLBACK_REDIRECT_URL
+        value: /dashboard
+
+databases:
+  - name: my-db
+    plan: starter
+    databaseName: mydb

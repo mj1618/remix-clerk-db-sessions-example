@@ -2,14 +2,14 @@
 
 ## Overview
 
-Language: `Typescript`
-Framework: `Remix`
-Database: `Postgres`
-Auth: `Clerk`
-Styling: `Plain Tailwind`
-Migration tool: `stepwise-migrations` (I built this - https://github.com/stepwise-dev/stepwise-migrations)
-Query Builder: `Kysely`
-Deployment: `Render`
+- Language: `Typescript`
+- Framework: `Remix`
+- Database: `Postgres`
+- Auth: `Clerk`
+- Styling: `Plain Tailwind`
+- Migration tool: `stepwise-migrations` (I built this - https://github.com/stepwise-dev/stepwise-migrations)
+- Query Builder: `Kysely`
+- Deployment: `Render`
 
 ## Instructions
 
